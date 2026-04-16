@@ -3,7 +3,7 @@
 import { useEffect,useState } from "react";
 import { doc,getDoc } from "firebase/firestore";
 import { db } from "@/lib/firebase";
-import LikeButton from "@/component/likeButton";
+import LikeButton from "@/component/LikeButton";
 import CommentSection from "@/component/CommentSection";
 
 export const dynamic = 'force-dynamic';

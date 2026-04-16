@@ -1,8 +1,8 @@
 "use client";
 
 import "./globals.css";
-import Providers from "@/component/Providers";
-import Navbar from "@/component/Navbar";
+import Providers from "../component/Providers";
+import Navbar from "../component/Navbar";
 
 export const dynamic = 'force-dynamic';
 

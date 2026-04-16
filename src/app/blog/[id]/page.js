@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { doc, getDoc, collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../../lib/firebase";
-import LikeButton from "../../../component/likeButton";
+import LikeButton from "../../../component/LikeButton";
 import CommentSection from "../../../component/CommentSection";
 
 export const dynamic = 'force-dynamic';
