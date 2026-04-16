@@ -35,7 +35,7 @@ export default function BlogPage({params}){
     <div className="p-10">
 
       <h1 className="text-3xl mb-4">
-        {blog.title}
+        {blog?.title}
       </h1>
 
       <p>{blog.content}</p>
