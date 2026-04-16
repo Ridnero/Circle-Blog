@@ -5,6 +5,8 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../../lib/firebase";
 import { useRouter } from "next/navigation";
 
+export const dynamic = 'force-dynamic';
+
 export default function Login(){
 
   const router = useRouter();

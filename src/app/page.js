@@ -4,10 +4,23 @@ import { useEffect,useState } from "react";
 import { collection,getDocs } from "firebase/firestore";
 import { db } from "../lib/firebase";
 import BlogCard from "../component/BlogCard";
+import { useAuth } from "../lib/auth-context";
+import { useRouter } from "next/navigation";
+
+export const dynamic = 'force-dynamic';
 
 export default function Home(){
 
+  const { user, loading } = useAuth();
+  const router = useRouter();
+
   const [blogs,setBlogs] = useState([]);
+
+  useEffect(() => {
+    if (!loading && !user) {
+      router.push('/auth/login');
+    }
+  }, [loading, user, router]);
 
   useEffect(() => {
     const fetchBlogs = async () => {

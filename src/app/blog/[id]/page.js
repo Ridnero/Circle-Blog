@@ -7,6 +7,8 @@ import { db } from "../../../lib/firebase";
 import LikeButton from "../../../component/likeButton";
 import CommentSection from "../../../component/CommentSection";
 
+export const dynamic = 'force-dynamic';
+
 export default function BlogPage() {
 
   const params = useParams();

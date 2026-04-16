@@ -1,22 +1,21 @@
+"use client";
+
 import "./globals.css";
-import { AuthProvider } from "@/lib/auth-context";
+import Providers from "@/component/Providers";
 import Navbar from "@/component/Navbar";
 
-export const metadata = {
-  title: "Circle Blog",
-  description: "A space for Readers and Authors",
-};
+export const dynamic = 'force-dynamic';
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-gray-50 text-slate-900 min-h-screen">
-        <AuthProvider>
+        <Providers>
           <Navbar />
           <main className="max-w-6xl mx-auto py-10 px-4">
             {children}
           </main>
-        </AuthProvider>
+        </Providers>
       </body>
     </html>
   );

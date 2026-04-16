@@ -46,15 +46,9 @@ export const AuthProvider = ({ children }) => {
     return () => unsubscribe();
   }, []);
 
-  useEffect(() => {
-    if (!loading && !user && !pathname.startsWith('/auth')) {
-      router.push('/auth/signup');
-    }
-  }, [loading, user, router, pathname]);
-
   return (
     <AuthContext.Provider value={{ user, role, loading }}>
-      {!loading && (user || pathname.startsWith('/auth')) && children}
+      {children}
     </AuthContext.Provider>
   );
 };

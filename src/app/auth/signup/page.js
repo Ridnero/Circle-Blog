@@ -6,6 +6,8 @@ import { auth, db } from "../../../lib/firebase";
 import { doc, setDoc } from "firebase/firestore";
 import { useRouter } from "next/navigation";
 
+export const dynamic = 'force-dynamic';
+
 export default function Signup() {
 
   const router = useRouter();

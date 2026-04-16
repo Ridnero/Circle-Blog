@@ -6,6 +6,8 @@ import { db,auth } from "../../lib/firebase";
 import { useAuth } from "../../lib/auth-context";
 import { useRouter } from "next/navigation";
 
+export const dynamic = 'force-dynamic';
+
 export default function CreateBlog(){
   const { user, role } = useAuth();
   const router = useRouter();
